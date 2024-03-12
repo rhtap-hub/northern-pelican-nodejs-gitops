@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: northern-pelican-nodejs 
+  janus-idp.io/tekton: northern-pelican-nodejs
+  backstage.io/kubernetes-id: northern-pelican-nodejs
+  backstage.io/kubernetes-namespace: oc-ci-e2e 
+  app.kubernetes.io/part-of: northern-pelican-nodejs
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
